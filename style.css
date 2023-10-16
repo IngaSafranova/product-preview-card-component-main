@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: hsl(30, 38%, 92%);
+    padding: 5%
+}
+html {
+    font-size: 14px;
+    
+    font-family: 'Montserrat',sans-serif;
+}
+.card {
+    background-color:  hsl(0, 0%, 100%);
+    border-radius: 3%;
+    overflow: hidden;
+}
+img {
+    width: 100vw;
+    background-position: center ;
+    background-attachment: fixed;
+    background-size:cover;
+}
+#title {
+    color:hsl(212, 21%, 14%) ;
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 700;
+    font-size: 2.1rem;
+    line-height: 2rem;
+}
+.card-txt {
+    padding: 5%;
+}
+.card-txt p, #description, #old-price {
+    color:hsl(228, 12%, 48%) ;
+    font-weight: 500;
+   
+}
+#description {
+    line-height: 1.5rem;
+}
+#new-price {
+    color: hsl(158, 36%, 37%);
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-right: 5px;
+}
+.price {
+    display: flex;
+    flex-direction: row;
+}
+ #old-price {
+    align-items: baseline;
+ }
+ button {
+    background-color: hsl(158, 36%, 37%);
+    font-weight: 700;
+    color:hsl(0, 0%, 100%) ;
+
+}
