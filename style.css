@@ -1,61 +1,119 @@
-* {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 body {
-    background-color: hsl(30, 38%, 92%);
-    padding: 5%
+  background-color: hsl(30, 38%, 92%);
+  padding: 2%;
+  /* height: 100%; */
 }
 html {
-    font-size: 14px;
-    
-    font-family: 'Montserrat',sans-serif;
+  height: 100%;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+}
+/* Improve media defaults*/
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
 }
 .card {
-    background-color:  hsl(0, 0%, 100%);
-    border-radius: 3%;
-    overflow: hidden;
-}
-img {
-    width: 100vw;
-    background-position: center ;
-    background-attachment: fixed;
-    background-size:cover;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 3%;
+  overflow: hidden;
+  width: 345px;
+  max-width: 600px;
+  height: 600px;
+  margin-left: 1px;
+  display: flex;
+  flex-direction: column;
 }
 #title {
-    color:hsl(212, 21%, 14%) ;
-    font-family: 'Fraunces', sans-serif;
-    font-weight: 700;
-    font-size: 2.1rem;
-    line-height: 2rem;
+  color: hsl(212, 21%, 14%);
+  font-family: "Fraunces", sans-serif;
+  font-weight: 700;
+  font-size: 2.1rem;
+  line-height: 2rem;
 }
 .card-txt {
-    padding: 5%;
+  padding: 5%;
 }
-.card-txt p, #description, #old-price {
-    color:hsl(228, 12%, 48%) ;
-    font-weight: 500;
-   
+.card-txt p,
+#description,
+#old-price {
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
+  /*If word is too long it can overflow the container*/
+  overflow-wrap: break-word;
 }
 #description {
-    line-height: 1.5rem;
+  line-height: 1.5rem;
+  overflow-wrap: break-word;
 }
 #new-price {
-    color: hsl(158, 36%, 37%);
-    font-family: 'Fraunces', sans-serif;
-    font-weight: 700;
-    font-size: 2.5rem;
-    margin-right: 5px;
+  color: hsl(158, 36%, 37%);
+  font-family: "Fraunces", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-right: 5px;
+  display: inline-block;
 }
 .price {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5%;
 }
- #old-price {
-    align-items: baseline;
- }
- button {
-    background-color: hsl(158, 36%, 37%);
-    font-weight: 700;
-    color:hsl(0, 0%, 100%) ;
+#old-price {
+  position: relative;
+  top: -3px;
+  margin-left: 5px;
+  text-decoration: line-through;
+}
+button {
+  background-color: hsl(158, 36%, 37%);
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  padding: 15px;
+  width: 90%;
+  margin-bottom: 5%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+button:hover {
+  cursor: pinter;
+  background-color: #a9c42d;
+  transform: scale(1);
+}
 
+/* to put little text symbol in the input box give input container(parent elm) position: relative and the symbol position: absolute and give it a top and left value */
+.button {
+  position: relative;
+}
+#shopping-cart img {
+  width: 8%;
+  color: hsl(0, 0%, 100%);
+  position: absolute;
+  left: 20%;
+  top: 20%;
+}
+@media (min-width: 600px) {
+  body {
+    max-width: 1440px;
+  }
+
+  .card {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    width: 600px;
+    height: 450px;
+  }
+  .card-txt {
+    align-self: center;
+    padding: 10%;
+  }
 }

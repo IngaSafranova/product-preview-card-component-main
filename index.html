@@ -22,11 +22,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,500;0,600;1,500&family=Fraunces:ital,opsz,wght@1,9..144,700&family=Karla:wght@400;700&family=Montserrat:ital,wght@0,500;1,600&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     
+    
   </head>
   <body>
     <main>
       <div class="card">
-<img src="./images/image-product-mobile.jpg" alt="image of the bottle of parfum ">
+
+        <!-- To change images according to media queries need to use picture tag and source tag -->
+        
+        <picture id="product-image">
+          <source id="mobile-pic" media="(min-width: 600px)" srcset="./images/image-product-desktop.jpg"/>
+         
+          <img src="./images/image-product-mobile.jpg" alt="image of the bottle of parfum "> 
+        </picture>
+
 <div class="card-txt">
   <p>P E R F U M E</p>
   <h1 id="title">Gabrielle Essence Eau De Parfum</h1>
@@ -34,22 +43,18 @@
     interpretation composed by Olivier Polge, Perfumer-Creator for the House of
     CHANEL.</p>
     <div class="price">
-      <p id="new-price"> $149.99 </p>
-      <p id="old-price">$169.99</p>
+     <div><span  id="new-price"> $149.99 </span>
+      <span id="old-price">$169.99</span></div> 
     </div>
     <div class="button">
-
+    <div id="shopping-cart">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACIElEQVR4nO2ZP2gTURzHX6i1WQxxdCh0MVtdCh0UxMGWTFZdVDDYRchSMhZxEVFIi6UdutROBR2MU0QcdOtghy6CYiudxG6igQ6tUPEjh+/IrzF/enfv3eXgfeBx3MF9f9/vhffLe3dKORwOhyMqwCVgtsu4DWRUPwKMAIf0pqRSHmBF9SvAReARUG0Zz0SAdZU2gGERYB94l8B4A1wJGyAD7JE836P8CptJuwd2owRYE0LLwOWYxkNR922UAPeE0FJooeB174u6i1GEpow8ieB1n4u6d6MIFYTQN6MuuwB8EHXPq7AAJ4BfWugPkAstdvyaA7pt+5yOKvhRiI0bc9oB4KyRDiQEa0LwTmTB3vWuGp13wAMhWDXiMo4O5APcEIJ1lZYO5AOcE4I7yjLAZ1HvggnBLPBbC3rHSYv/wE+E+Z/AkKmnskP8zBsxrwPUYzb/Ghg0GcDb4Ph8tbj+fwpcM2ZcBJgWAV6otAGMiwBfVNoATgI/RIgFYMJCFxqxGWIuhsl76L1ksBVgUHcH28xYCSCCXNfdwkYXWgVOWQ3g6BeAHDAWdpfGv/dOBT3ifXkMlIEDPem8Yzng/WeADTFx33vX7Dn+f3ntr059vPPRABov23Sfml3nzeKVDu2vEkCj0eb+hl3nzeK3OgS4GUBju839W3adH93gfGop7p1nA2iUEv2IAuSBx8Ar/W0hH0KjqPe/3ijacepwOFQ/8xdKO0DptdZC5AAAAABJRU5ErkJggg==">
+    </div>
     <button type="button">Add to Cart</button>
   </div>
 </div>
       </div>
     </main>
     
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Inga S</a>.
-    </div>
   </body>
 </html>
